@@ -1,5 +1,6 @@
 const { resolve } = require('./util');
 const BEvaMicroCpnPlugin = require('./plugins');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 /**
  *
  * @param {*}
@@ -44,5 +45,10 @@ module.exports = () => ({
     },
     plugins: [
         new BEvaMicroCpnPlugin(),
+        new HtmlWebpackPlugin({
+            title: '@waylon/md-loader',
+            filename: 'index.html',
+            template: resolve('../public/index.html')
+        })
     ]
 });
