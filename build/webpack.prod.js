@@ -10,8 +10,8 @@ module.exports = () => ({
     mode: 'production',
     entry: resolve('../src/index.js'),
     output: {
-        path: resolve('../dist'),
-        filename: '[name]/index.js',
+        path: resolve('../docs'),
+        filename: 'index.js',
         chunkFilename: '[name].js',
         library: '[name]',
         libraryTarget: 'umd'
